@@ -23,5 +23,9 @@ namespace SchoolPractice
             
         
         }
+        public override string ToString()
+        {
+            return Name + " (Credits: " + NumberOfCredits + ", GPA: " + Gpa + ")";
+        }
     }
 }

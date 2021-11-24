@@ -6,6 +6,7 @@ namespace SchoolPractice
     {
         public static void Main(string[] args)
         {
+
             // TODO: Instantiate your objects and test your exercise solutions with print statements here.
             Student Dan = new Student("Dan", 500, 1, 4.0);
             Student John = new Student("John", 400, 1, 4.0);
@@ -14,10 +15,10 @@ namespace SchoolPractice
               Dan.StudentId = 500;
               Dan.NumberOfCredits = 1;
               Dan.Gpa = 4.0;*/
-            List<Student> roster = new List<Student>();
-            roster.Add(Dan);
+            List<Student> roster = new List<Student>() {Dan, John, Pri };
+         /*   roster.Add(Dan);
             roster.Add(John);
-            roster.Add(Pri);
+            roster.Add(Pri);*/
 
             Course codeCamp = new Course("STLCC CodeCamp", "Gerrard", roster);
             Teacher gerrard = new Teacher("Gerrard", "Darris", "Web Dev", 8);
@@ -30,6 +31,8 @@ namespace SchoolPractice
             Console.WriteLine($"The name of the course is {codeCamp.Title}");
             Console.WriteLine($"The name of the teacher is {gerrard.FirstName}");
 
+            Console.WriteLine(Dan.ToString());
+            Console.WriteLine(Dan);
             Console.ReadLine();
         }
     }
